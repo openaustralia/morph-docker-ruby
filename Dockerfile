@@ -17,6 +17,14 @@ RUN adduser --home /data --disabled-login --gecos "Scraper User" --uid 4243 --gi
 ADD Gemfile /etc/Gemfile
 RUN /bin/bash -l -c 'bundle install --gemfile /etc/Gemfile'
 
+# Special handling for scraperwiki gem because rubygems doesn't support
+# gems from git repositories. So we have to explicitly install it.
+RUN mkdir /build
+RUN git clone https://github.com/openaustralia/scraperwiki-ruby.git /build
+RUN cd /build; git checkout morph_defaults
+RUN /bin/bash -l -c 'cd /build; rake install'
+RUN rm -rf /build
+
 VOLUME /repo
 VOLUME /data
 WORKDIR /data

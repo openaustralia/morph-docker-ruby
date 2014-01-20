@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'scraperwiki', git: "https://github.com/openaustralia/scraperwiki-ruby.git", branch: "morph_defaults"
-
 # These specific gems and versions are those installed on ScraperWiki "classic" as of 17 Aug 2013
 # Note also that the ruby version is set by .ruby-version in this directory
 
