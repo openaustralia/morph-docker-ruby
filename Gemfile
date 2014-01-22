@@ -40,7 +40,10 @@ gem "httparty", "0.8.3"
 gem "httpauth", "0.1"
 gem "httpclient", "2.2.4"
 gem "i18n", "0.6.0"
-gem "johnson", "2.0.0.pre3"
+# Leaving johnson commented out for the time being as it depends
+# on the mozilla js engine which I'm having trouble finding an easy
+# way to install
+#gem "johnson", "2.0.0.pre3"
 gem "json", "1.6.5"
 gem "jwt", "0.1.4"
 gem "libxml-ruby", "2.2.1"
