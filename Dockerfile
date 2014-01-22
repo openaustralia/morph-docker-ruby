@@ -30,6 +30,8 @@ RUN /bin/bash -l -c 'cd /build; rake build'
 RUN /bin/bash -l -c 'cd /build; gem install /build/pkg/scraperwiki-3.0.1.gem'
 RUN rm -rf /build
 
+RUN apt-get -y install pdftohtml
+
 VOLUME /repo
 VOLUME /data
 WORKDIR /data
