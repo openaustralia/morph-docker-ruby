@@ -2,7 +2,7 @@ FROM openaustralia/morph-base
 MAINTAINER Matthew Landauer <matthew@oaf.org.au>
 
 # libcurl is needed by typhoeus gem
-RUN apt-get -y install curl libxslt-dev libxml2-dev libcurl4-gnutls-dev pdftohtml
+RUN apt-get -y install curl libxslt-dev libxml2-dev libcurl4-gnutls-dev poppler-utils
 
 RUN curl -sSL https://get.rvm.io | bash -s stable
 RUN echo 'source /usr/local/rvm/scripts/rvm' >> /etc/bash.bashrc
