@@ -22,3 +22,6 @@ RUN cd /build; git checkout morph_defaults
 RUN /bin/bash -l -c 'cd /build; rake build'
 RUN /bin/bash -l -c 'cd /build; gem install /build/pkg/scraperwiki-3.0.1.gem'
 RUN rm -rf /build
+
+# Add prerun script which will disable output buffering
+ADD prerun.rb /usr/local/lib/prerun.rb
