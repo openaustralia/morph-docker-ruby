@@ -94,3 +94,7 @@ gem "unix_utils", "0.0.14"
 gem "upsert", "0.3.4"
 gem "uuidtools", "2.1.3"
 gem "webrobots", "0.0.12"
+
+
+gem "capybara", "2.0.3"
+gem "capybara-webkit", "1.3.0"
